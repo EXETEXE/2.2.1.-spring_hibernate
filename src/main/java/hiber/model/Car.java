@@ -17,8 +17,6 @@ public class Car implements Serializable {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(mappedBy = "car")
-    private User user;
 
     public Car() {
     }
@@ -26,13 +24,6 @@ public class Car implements Serializable {
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
-    }
-
-    public Car(String model, int series, User user) {
-        this.model = model;
-        this.series = series;
-        this.user = user;
-        user.setCar(this);
     }
 
     public String getModel() {
@@ -49,14 +40,6 @@ public class Car implements Serializable {
 
     public void setSeries(int series) {
         this.series = series;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override

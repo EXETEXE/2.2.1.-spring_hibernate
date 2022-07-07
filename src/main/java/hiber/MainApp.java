@@ -37,10 +37,15 @@ public class MainApp {
       User carUser3 = new User("John", "Smith", "jsmith@mail.ru");
       User carUser4 = new User("Dart", "Vader", "dvader@mail.ru");
 
-      Car car1 = new Car("Toyota", 4, carUser1);
-      Car car2 = new Car("Mersedes", 15,carUser2);
-      Car car3 = new Car("Lada", 2,carUser3);
-      Car car4 = new Car("BMW", 40,carUser4);
+      Car car1 = new Car("Toyota", 4);
+      Car car2 = new Car("Mersedes", 15);
+      Car car3 = new Car("Lada", 2);
+      Car car4 = new Car("BMW", 40);
+
+      carUser1.setCar(car1);
+      carUser2.setCar(car2);
+      carUser3.setCar(car3);
+      carUser4.setCar(car4);
 
 
       userService.add(carUser1);
